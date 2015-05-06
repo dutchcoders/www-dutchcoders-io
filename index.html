@@ -15,7 +15,7 @@
 </head>
 <body>
 
-<header class="hero hero-dark">
+<header class="hero hero-dark" id="hero">
   <div class="container">
 
     <div class="row header-row">
@@ -105,7 +105,10 @@
 
 <!-- Dark / Light switcher -->
 <script type="text/javascript">
-  
+  var hero = document.getElementById('hero');
+  hero.addEventListener('click', function(){
+    this.className = (this.className.indexOf('dark') === -1 ? 'hero hero-dark' : 'hero hero-light');
+  });
 </script>
 
 </body>
